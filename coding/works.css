@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* ===========================================
+   ◆ リセットの役割をする記述
+=========================================== */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+button,
+input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+a {
+    text-decoration: none;
+}
+address {
+    font-style: normal;
+}
+/* ===========================================
+   ◆ 全体に対する基本指定
+=========================================== */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #ffffff;
+    font-family: "Klee One", cursive;
+    overflow-x: hidden;
+}
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+/* ==========================
+ works single
+========================== */
+.wrapper {
+    width: 100%;
+}
+main {
+    width: 100%;
+    overflow: visible;
+}
+.page {
+    height: auto;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    color: #333;
+    height: auto;
+    overflow: visible;
+}
+.works-single {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 50px;
+}
+/* title */
+.page-title-wrapper {
+    margin-bottom: 70px;
+    font-family: "Quicksand", sans-serif;
+}
+.page-title-wrapper h2 {
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(40px, 5vw, 70px);
+    color: #0a4b3e;
+    letter-spacing: .12em;
+    font-weight: 600;
+}
+.eachTextAnime {
+    font-family: "Klee One", sans-serif;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: .3em;
+    margin-top: 15px;
+}
+/* ==========================
+ 上部2カラム
+========================== */
+.content-wrapper {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+.item-left {
+    width: calc(55% - 40px);
+}
+.item-right {
+    width: calc(45% - 40px);
+}
+/* image */
+.eyecatch {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.eyecatch img {
+    width: 100%;
+    display: block;
+}
+/* ==========================
+ 作品タイトル
+========================== */
+.term-list {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.term-list li {
+    border: 1px solid #ccc;
+    color: #666;
+    padding: 5px 15px;
+    font-size: 12px;
+    letter-spacing: .1em;
+    font-family: "Klee One", cursive;
+}
+.works-title-block h3 {
+    font-size: 32px;
+    font-weight: 300;
+    color: #333;
+    letter-spacing: .1em;
+    margin-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+}
+.category {
+    font-size: 14px;
+    color: #888;
+    letter-spacing: .15em;
+}
+/* URL */
+.view-more {
+    margin-top: 30px;
+}
+.view-more a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #c17a54;
+    text-decoration: none;
+}
+.link {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+/* ==========================
+ 作品情報
+========================== */
+.item-right dl {
+    padding: 25px 0;
+}
+.item-right hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+.item-right dt {
+    color: #0e6b58;
+    font-weight: 500;
+    letter-spacing: .1em;
+}
+.item-right dd {
+    color: #444;
+    line-height: 2;
+    letter-spacing: .08em;
+}
+/* ==========================
+ 下部説明
+========================== */
+.item-under {
+    margin-top: 70px;
+}
+
+.item-under dl {
+    padding: 20px 0;
+}
+.section-title {
+    font-family: "Special Elite", cursive;
+    font-size: 24px;
+    font-weight: 300;
+    color: #0e6b58;
+    letter-spacing: .15em;
+    margin-bottom: 15px;
+}
+.item-under dd {
+    line-height: 2;
+    letter-spacing: .1em;
+}
+.works-textlist {
+    padding-left: 20px;
+}
+.works-textlist li {
+    margin-bottom: 10px;
+}
+/* ==========================
+ 前後ナビ
+========================== */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.page-nav a {
+    color: #555;
+    text-decoration: none;
+    letter-spacing: .2em;
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+}
+.page-nav a:hover {
+    opacity: .6;
+}
+.btnarrow-left::before {
+    content: "←";
+    margin-right: 10px;
+}
+.btnarrow-top::before {
+    content: "↑";
+    margin-right: 10px;
+} 
+
+.btnarrow-right::after {
+    content: "→";
+    margin-left: 10px;
+}
+footer {
+    height: auto;
+    padding: 60px 0;
+}
+.footer-copy {
+    font-family: "Edu VIC WA NT Hand", cursive;
+    font-size: 12px;
+    color: #9aa8a4;
+    letter-spacing: 0.06em;
+    opacity: 0.8;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+/* ==========================
+ about page 専用
+========================== */
+.about-top {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+.photo-block {
+    width: 200px;
+    flex-shrink: 0;
+}
+.photo-name {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    letter-spacing: .12em;
+    color: #0a4b3e;
+    margin-top: 14px;
+    text-align: center;
+}
+.photo-block img {
+    width: 100%;
+    border-radius: 4px;
+}
+.skill-block {
+    max-width: 680px;
+    padding-top: 50px;
+}
+.skill-block .section-label {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    color: #0e6b58;
+    margin-bottom: 20px;
+}
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.skill-grid li {
+    display: flex;
+    gap: 5px;
+    padding: 16px 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+.skill-name {
+    font-size: 14px;
+    color: #444;
+    letter-spacing: .08em;
+}
+.skill-stars {
+    font-size: 15px;
+    color: #0e6b58;
+    letter-spacing: .15em;
+}
+
+.profile-block {
+    margin-top: 50px;
+}
+.profile-block .term-list {
+    margin-bottom: 20px;
+}
+/* ==========================
+ responsive
+========================== */
+@media(max-width:900px) {
+    .works-single {
+        padding: 70px 25px;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .item-left,
+    .item-right {
+        width: 100%;
+    }
+    .works-title-block h3 {
+        font-size: 25px;
+    }
+    .skill-block {
+        max-width: 100%;
+    }
+}
+@media(max-width:700px) {
+     .about-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .photo-block {
+        width: 140px;
+    }
+    .skill-block {
+        width: 100%;
+    }
+    .skill-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+    .skill-grid li {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 14px 8px;
+    }
+}
+@media(max-width:480px) {
+    .page-title-wrapper {
+        margin-bottom: 40px;
+    }
+    .works-single {
+        padding: 50px 20px;
+    }
+    .page-nav {
+        font-size: 13px;
+    }
+     .skill-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .skill-block .section-label {
+        font-size: 15px;
+    }
+}

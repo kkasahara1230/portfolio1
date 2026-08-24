@@ -1,0 +1,392 @@
+@charset "utf-8";
+
+/* ===========================================
+   ◆ リセットの役割をする記述
+=========================================== */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+button,
+input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+/* ===========================================
+   ◆ 全体に対する基本指定
+=========================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Klee One", cursive;
+    color: #4a6660;
+    line-height: 1.8;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.main {
+    padding-top: 88px;
+}
+
+#top,
+#about,
+#works {
+    scroll-margin-top: 88px;
+}
+
+/* ===========================================
+   ◆ header
+=========================================== */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 24px 32px;
+}
+
+#header .menu {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kayoko {
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #0a4b3e;
+}
+
+.header-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header-nav li a {
+    font-size: 13px;
+    color: #4a6660;
+    transition: color 0.2s ease;
+}
+
+.header-nav li a:hover {
+    color: #0e6b58;
+}
+
+/* ===========================================
+   ◆ hero
+=========================================== */
+.hero {
+    text-align: center;
+    padding: 64px 28px 72px;
+}
+
+.hero h1 {
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(40px, 5vw, 70px);
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #0e6b58;
+    margin-bottom: 12px;
+}
+
+.hero-sub {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #5f7873;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hero-image img {
+    width: 300px;
+}
+
+/* ===========================================
+   ◆ section heading（about / works 共通）
+=========================================== */
+.about h2,
+.works h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0e6b58;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.about h2 .ja,
+.works h2 .ja {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9aa8a4;
+}
+
+/* ===========================================
+   ◆ about
+=========================================== */
+.about {
+    padding: 64px 32px;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-photo {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.photo-box {
+    width: 130px;
+    height: 160px;
+    background-color: #dcdcdc;
+    border-radius: 4px;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-box:hover {
+    opacity: 0.7;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0a4b3e;
+    margin-bottom: 12px;
+}
+
+.about-text p:not(.about-name) {
+    font-size: 13px;
+    color: #5f7873;
+    margin-bottom: 20px;
+}
+
+.view-more {
+    display: inline-block;
+    font-size: 12px;
+    color: #c17a54;
+    border-bottom: 1px solid #c17a54;
+    padding-bottom: 2px;
+}
+
+/* ===========================================
+   ◆ works
+=========================================== */
+.works {
+    padding: 64px 32px 80px;
+}
+
+.works-category {
+    display: flex;
+    gap: 24px;
+    font-size: 12px;
+    color: #9aa8a4;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #e3ece9;
+    padding-bottom: 16px;
+}
+
+.works-category li a {
+    transition: color 0.2s ease;
+}
+
+.works-category li.is-active a,
+.works-category li a:hover {
+    color: #0e6b58;
+}
+
+.works-group {
+    margin-bottom: 48px;
+}
+
+.works-group:last-child {
+    margin-bottom: 0;
+}
+
+.works-group-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9aa8a4;
+    margin-bottom: 16px;
+}
+
+.works-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.works-thumb {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    transition: opacity 0.2s ease;
+}
+
+.works-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.works-list a:hover .works-thumb img {
+    transform: scale(1.03);
+    opacity: 0.8;
+}
+
+.works-name {
+    font-size: 13px;
+    color: #0a4b3e;
+    margin-bottom: 4px;
+}
+
+.works-role {
+    font-size: 11px;
+    color: #9aa8a4;
+}
+
+/* ===========================================
+   ◆ footer
+=========================================== */
+footer {
+    text-align: center;
+    padding: 24px 0;
+    border-top: 1px solid #e3ece9;
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: #9aa8a4;
+}
+/* ===========================================
+   ◆ レスポンシブ
+=========================================== */
+@media (max-width: 768px) {
+    #header {
+        padding: 18px 20px;
+    }
+
+    .main {
+        padding-top: 74px;
+    }
+
+    #top,
+    #about,
+    #works {
+        scroll-margin-top: 74px;
+    }
+
+    .header-nav {
+        gap: 16px;
+    }
+
+    .hero {
+        padding: 64px 20px 48px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .about,
+    .works {
+        padding: 48px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .works-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-nav {
+        gap: 12px;
+    }
+
+    .works-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
